@@ -17,6 +17,7 @@ class HomeController extends Controller {
   }
   async testPost() {
     const { ctx } = this;
+    console.log(ctx.request);
     ctx.body = {
       name: ctx.request.body.name,
       age: ctx.request.body.age,

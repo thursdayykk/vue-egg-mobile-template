@@ -7,7 +7,7 @@ import store from './store';
 import 'lib-flexible/flexible.js'
 
 Vue.config.productionTip = false
-console.log(router)
+console.log(router.options)
 console.log(store)
 /* eslint-disable no-new */
 new Vue({

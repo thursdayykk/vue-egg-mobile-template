@@ -11,7 +11,7 @@
 // vuex使用示例
 import {mapGetters, mapState, mapMutations, mapActions} from 'vuex'
 import {Button} from 'vant'
-import {testGet} from '@/api/test/index.js'
+import {testGet,testPost} from '@/api/test/index.js'
 export default {
     components:{
         [Button.name]:Button
@@ -19,6 +19,7 @@ export default {
     created(){
         console.log(this.$store.state)
         this.getData()
+        this.getData2()
         // console.log()
 
     },
@@ -37,6 +38,9 @@ export default {
         }),
         async getData(){
             console.log(await testGet({name:'hello'}))
+        },
+        async getData2(){
+            console.log(await testPost({name:'hello',age:18}))
         } 
     }
 }
